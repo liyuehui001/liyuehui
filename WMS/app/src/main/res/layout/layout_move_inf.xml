@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <include layout="@layout/fragment_timeline_4" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/grayborder" />
+    <!--底边border-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/step_layout_1"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="移出货位:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/move_out_shelf"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_layout_2"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="物料编码:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/move_matnr"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="物料名称:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/move_matnrname"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="单位:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/move_unit"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="库存数量:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/move_stock_qty"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_layout_3"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="移入货位:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/move_in_shelf"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_layout_4"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:inputType="phone"
+                        android:text="移动数量:" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/move_amount"
+                    style="@style/field"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edittext"
+                    android:inputType="phone" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/move_commint_action"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_main_bg"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="箱号:" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/delivery_boxno"
+                style="@style/field"
+                android:imeOptions="actionDone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="出库单号:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/delivery_outboundno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="发运地址:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/delivery_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="委托单位:" />
+            </RelativeLayout>
+            <Spinner
+                android:id="@+id/delivery_transfervendor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="发运方式:" />
+            </RelativeLayout>
+            <Spinner
+                android:id="@+id/delivery_transfertype"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </Spinner>
+        </LinearLayout>
+
+
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="保险报价:" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/delivery_price"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+            <Button
+                android:id="@+id/delivery_getprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报价获取"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="物流公司:" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/delivery_company"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/form_field">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="物流单号:" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/delivery_no"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/delivery_commit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/selector_main_bg"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wms="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="acceptance"
+            type="com.version.smec.wms.module.Acceptance.bean.AcceptanceModule"/>
+    </data>
+    <RelativeLayout
+        android:background="@color/color_activity_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.version.smec.wms.widget.TopBarLayout
+            android:layout_alignParentTop="true"
+            android:id="@+id/cv_todo_list_detail_title"
+            wms:icon_left="@mipmap/wms_requirement_back"
+            wms:icon_right_second="@mipmap/wms_requirement_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+
+        </com.version.smec.wms.widget.TopBarLayout>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rl_bottom_refuse_agree"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_bottom_back_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_refuse"
+                    android:layout_margin="@dimen/px10dp"
+                    android:background="@drawable/bg_btn_return"
+                    android:gravity="center"
+                    android:text="驳回"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="@dimen/px80dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_agree"
+                    android:layout_margin="@dimen/px10dp"
+                    android:background="@drawable/bg_btn_approve"
+                    android:gravity="center"
+                    android:text="批准"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="@dimen/px80dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_bottom_back_submit_approval"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_refuse_approval"
+                    android:layout_margin="@dimen/px10dp"
+                    android:background="@drawable/bg_btn_return"
+                    android:gravity="center"
+                    android:text="驳回"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="@dimen/px80dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_agree_approval"
+                    android:layout_margin="@dimen/px10dp"
+                    android:background="@drawable/bg_btn_approve"
+                    android:gravity="center"
+                    android:text="@string/str_acceptance_comfirm"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="@dimen/px80dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/scro"
+            android:layout_above="@+id/rl_bottom_refuse_agree"
+            android:layout_below="@+id/cv_todo_list_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    style="@style/four_bill_style_top"
+                    android:id="@+id/ll_todolist_top_detail">
+
+                    <include
+                        android:id="@+id/acceptance_include"
+                        layout="@layout/layout_accptance_include"
+                        bind:acceptanceInformession="@{acceptance}" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/aaaa"
+                    style="@style/four_bill_style_rl_matnr">
+
+                    <TextView
+                        android:id="@+id/matnr_title_info"
+                        android:text="领用单物料信息"
+                        style="@style/four_middle_matnr_title_style_tv" />
+
+                    <Button
+                        android:text="@string/cutout_shouqi"
+                        android:id="@+id/btn_all_spread_packup"
+                        style="@style/four_bill_style_spread_packup_btn"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_below="@id/btn_all_spread_packup"
+                        android:id="@+id/acceptance_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/four_bill_style_rl_matnr">
+
+                    <TextView
+                        android:id="@+id/attach_title_info"
+                        android:text="附件信息"
+                        style="@style/four_middle_matnr_title_style_tv" />
+
+                    <Button
+                        android:id="@+id/btn_enclosure_shouqi"
+                        android:text="@string/cutout_shouqi"
+                        style="@style/four_bill_style_spread_packup_btn"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_below="@id/btn_enclosure_shouqi"
+                        android:id="@+id/enclosure_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+</layout>
+

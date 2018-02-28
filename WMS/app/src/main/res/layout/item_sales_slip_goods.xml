@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.version.smec.wms.module.SalesSlipment.bean.SalesSlipGoodsModule"/>
+        <variable
+            name="item_good_detail"
+            type="SalesSlipGoodsModule"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:padding="@dimen/px20dp"
+        android:layout_marginBottom="@dimen/px20dp"
+        android:background="@drawable/bg_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_item_sale_slip_good_number"
+            style="@style/todo_list_detail">
+            <TextView
+                android:text="@string/str_item_sale_slip_good_number"
+                style="@style/todo_list_detail_tv"/>
+            <TextView
+                android:id="@+id/tv_item_sale_slip_good_number"
+                android:text="@{item_good_detail.matnr}"
+                style="@style/todo_list_detail_tv"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/ll_item_sale_slip_good_number"
+            android:id="@+id/ll_item_sale_slip_good_name"
+            style="@style/todo_list_detail">
+            <TextView
+                android:text="@string/str_item_sale_slip_good_name"
+                style="@style/todo_list_detail_tv"/>
+            <TextView
+                android:id="@+id/tv_item_sale_slip_good_name"
+                android:text="@{item_good_detail.matnrName}"
+                style="@style/todo_list_detail_tv"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/ll_item_sale_slip_good_name"
+            android:id="@+id/rl_sale_number_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_item_sale_number"
+                android:layout_alignParentLeft="true"
+                style="@style/todo_list_detail">
+                <TextView
+                    android:text="@string/str_item_sale_number"
+                    style="@style/todo_list_detail_tv" />
+                <TextView
+                    android:id="@+id/tv_item_sale_number"
+                    android:text="@{item_good_detail.qty}"
+                    style="@style/todo_list_detail_tv"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/px30dp"
+                android:layout_toRightOf="@id/ll_item_sale_number"
+                style="@style/todo_list_detail">
+                <TextView
+                    android:text="@string/str_item_sale_unit"
+                    style="@style/todo_list_detail_tv" />
+                <TextView
+                    android:id="@+id/tv_item_sale_unit"
+                    android:text="@{item_good_detail.unit}"
+                    style="@style/todo_list_detail_tv"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@id/rl_sale_number_unit"
+            android:id="@+id/rl_sale_repertory_all_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_sale_repertory_all"
+                android:layout_alignParentLeft="true"
+                style="@style/todo_list_detail">
+                <TextView
+                    android:text="@string/str_sale_repertory_all"
+                    style="@style/todo_list_detail_tv" />
+                <TextView
+                    android:id="@+id/tv_sale_repertory_all"
+                    android:text="@{item_good_detail.hdQty}"
+                    style="@style/todo_list_detail_tv"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/px30dp"
+                android:layout_toRightOf="@id/ll_sale_repertory_all"
+                style="@style/todo_list_detail">
+                <TextView
+                    android:text="@string/str_sale_repertory_part"
+                    style="@style/todo_list_detail_tv" />
+                <TextView
+                    android:id="@+id/tv_sale_repertory_part"
+                    android:text="@{item_good_detail.branchQty}"
+                    style="@style/todo_list_detail_tv"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--Standard selling price-->
+
+        <LinearLayout
+            android:layout_below="@id/rl_sale_repertory_all_part"
+            android:id="@+id/ll_item_sale_slip_standard_selling_price"
+            style="@style/todo_list_detail">
+            <TextView
+                android:text="@string/str_item_sale_slip_standard_selling_price"
+                style="@style/todo_list_detail_tv"/>
+            <TextView
+                android:id="@+id/tv_item_sale_slip_standard_selling_price"
+                android:text="@{item_good_detail.standPrice}"
+                style="@style/todo_list_detail_tv"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_below="@id/ll_item_sale_slip_standard_selling_price"
+            android:id="@+id/ll_desc"
+            style="@style/todo_list_detail">
+            <TextView
+                android:text="@string/str_sale_desc"
+                style="@style/todo_list_detail_tv"/>
+            <TextView
+                android:id="@+id/tv_desc"
+                android:text="@{item_good_detail.description}"
+                style="@style/todo_list_detail_tv"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_spread_packup"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/blue_requirement"
+                android:id="@+id/tv_text_spread_packup"
+                android:text="@string/todo_list_pack_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_spread_packup"
+                android:src="@mipmap/wms_requirement_packup"
+                style="@style/style_view_detail_imageview" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
+

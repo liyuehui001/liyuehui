@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wms="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.version.smec.wms.module.Requirements.bean.RequirementDetailModel"/>
+        <variable
+            name="requirement_detail"
+            type="RequirementDetailModel"/>
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/color_activity_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--头部-->
+
+        <com.version.smec.wms.widget.TopBarLayout
+            android:layout_alignParentTop="true"
+            android:id="@+id/cv_todo_list_detail_title"
+            wms:text_title="@string/todo_detail"
+            wms:icon_left="@mipmap/wms_requirement_back"
+            wms:icon_right_second="@mipmap/wms_requirement_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+
+        </com.version.smec.wms.widget.TopBarLayout>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/Rl_bottom_btn_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_bottom_btn_two"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_margin="@dimen/px10dp"
+                    android:id="@+id/tv_refuse"
+                    android:background="@drawable/bg_btn_return"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="@string/tode_list_refuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp" />
+
+                <TextView
+                    android:layout_margin="@dimen/px10dp"
+                    android:id="@+id/tv_agree"
+                    android:background="@drawable/bg_btn_approve"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tode_list_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_check_matnrs_liu"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="@dimen/px10dp"
+                    android:text="@string/str_check_goods_liu"
+                    android:background="@drawable/bg_btn_approve"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_confirm"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="@dimen/px10dp"
+                    android:text="@string/str_check_goods_confirm"
+                    android:background="@drawable/bg_btn_approve"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px80dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <ScrollView
+            android:id="@+id/sv_main_content"
+            android:fillViewport="true"
+            android:layout_below="@id/cv_todo_list_detail_title"
+            android:layout_above="@id/Rl_bottom_btn_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_todolist_top_detail"
+                    style="@style/four_bill_style_top">
+                    <include
+                        android:id="@+id/include_requirements_top"
+                        layout="@layout/layout_todolist_detail_info"
+                        bind:requirementDetailInfo="@{requirement_detail}"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/rl_main_content"
+                    style="@style/four_bill_style_rl_matnr">
+                    <TextView
+                        android:id="@+id/matnr_title_info"
+                        android:text="@string/todo_list_detail_detail"
+                        style="@style/four_middle_matnr_title_style_tv"
+                         />
+
+                    <Button
+                        android:id="@+id/btn_all_spread_packup"
+                        android:text="@string/cutout_shouqi"
+                        style="@style/four_bill_style_spread_packup_btn"
+                         />
+
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_below="@id/btn_all_spread_packup"
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

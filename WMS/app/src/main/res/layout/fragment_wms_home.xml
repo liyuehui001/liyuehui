@@ -1,0 +1,244 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.smec.wms.android.fragment.WmsHomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:textColor="#333"
+        android:textSize="18sp"
+        android:text="查询列表"
+        style="@style/common_title"/>
+    <LinearLayout
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:id="@+id/home_todo"
+            android:background="@drawable/left_center"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@mipmap/home_todo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="待办事项"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#666"
+                    android:text="需要审批的流程待办"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/home_list"
+            android:paddingRight="10dp"
+            android:background="@drawable/left_center"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@mipmap/home_list"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="订单管理"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#666"
+                    android:text="订单发起,订单查询等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:id="@+id/home_in"
+            android:background="@drawable/left_center"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@mipmap/home_in"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="出库管理"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#666"
+                    android:text="拣货,装箱,箱子绑定,物流管理等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:id="@+id/home_out"
+            android:background="@drawable/left_center"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@mipmap/home_out"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="入库管理"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#666"
+                    android:text="入库,上架"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingRight="10dp"
+            android:id="@+id/home_other"
+            android:background="@drawable/left_center"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@mipmap/home_other"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="其他功能"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#666"
+                    android:text="移库,盘点"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingRight="10dp"
+            android:id="@+id/home_borrow"
+            android:background="@drawable/left_center"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <ImageView
+                android:src="@mipmap/home_borrow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20sp"
+                    android:text="借用领用"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#666"
+                    android:text="流程发起,相关查询等"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_weight="1"
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></View>
+</LinearLayout>

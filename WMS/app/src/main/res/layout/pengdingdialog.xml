@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:paddingLeft="@dimen/px38dp"
+        android:paddingRight="@dimen/px42dp"
+        android:gravity="center"
+        android:background="@drawable/bg_layout_shade_corner"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_senior_title"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_marginBottom="@dimen/px20dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="高级查询"
+            android:textSize="@dimen/font_size_22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="@dimen/px22dp"
+            android:layout_marginBottom="@dimen/px22dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/px530dp"
+            android:layout_height="@dimen/px62dp">
+
+            <TextView
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="合同号 ："
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingTop="@dimen/px10dp"
+                android:paddingBottom="@dimen/px10dp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px20dp"
+                android:id="@+id/ed_hetong"
+                android:background="@drawable/fillet_border"
+                android:layout_weight="2"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="@dimen/px62dp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_marginBottom="@dimen/px22dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/px530dp"
+            android:layout_height="@dimen/px62dp">
+
+            <TextView
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="梯号 ："
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingTop="@dimen/px10dp"
+                android:paddingBottom="@dimen/px10dp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px12dp"
+                android:id="@+id/ed_tihao"
+                android:background="@drawable/fillet_border"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/px22dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/px530dp"
+            android:layout_height="@dimen/px62dp">
+
+            <TextView
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="物料号 ："
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingTop="@dimen/px10dp"
+                android:paddingBottom="@dimen/px10dp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px12dp"
+                android:id="@+id/ed_wuliao"
+                android:background="@drawable/fillet_border"
+                android:layout_weight="2"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="@dimen/px62dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/px22dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/px530dp"
+            android:layout_height="@dimen/px62dp">
+
+            <TextView
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="物料名称 ："
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingTop="@dimen/px10dp"
+                android:paddingBottom="@dimen/px10dp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px12dp"
+                android:id="@+id/ed_wuliaoname"
+                android:background="@drawable/fillet_border"
+                android:layout_weight="2"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="@dimen/px62dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/px22dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/px530dp"
+            android:layout_height="@dimen/px62dp">
+
+            <TextView
+                android:gravity="right"
+                android:layout_weight="1"
+                android:text="联系人 ："
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:paddingTop="@dimen/px10dp"
+                android:paddingBottom="@dimen/px10dp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px12dp"
+                android:id="@+id/ed_lianxiren"
+                android:background="@drawable/fillet_border"
+                android:layout_weight="2"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="@dimen/px62dp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="@dimen/px550dp"
+            android:layout_height="@dimen/px122dp">
+
+            <Button
+                android:id="@+id/dia_search"
+                android:text="查询"
+                style="@style/customDialogButton"/>
+
+            <Button
+                android:id="@+id/dia_cancel"
+                android:text="取消"
+                style="@style/customDialogButton" />
+
+            <Button
+                android:id="@+id/dia_reset"
+                android:text="重置"
+                style="@style/customDialogButton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

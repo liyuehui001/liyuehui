@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smec.wms"
+    android:versionName="1.1.14">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:name=".android.application.WmsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/smec"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".android.activity.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".android.activity.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.MipcaActivityCapture"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PutAwayScanActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PutawayDetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.CheckMatnrActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.BoxOnlineScanActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.BoxOfflineScanActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PackActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.MoveActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.BoxBindActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PickActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PickDetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PackDetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.PutAwayOfflineActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.BoxBindUnbindListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.StockQueryActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.MatnrQueryActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.BluetoothListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".android.activity.ShelfQueryActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".android.activity.MatnrStockQueryActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".android.activity.CPZXActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".android.activity.DeliveryActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".android.activity.ImageQueryActivity"
+            android:label="@string/title_activity_image_query"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".android.activity.HomeListActivity" />
+        <activity android:name=".android.module.OtherQueryMatnrActivity" />
+        <activity android:name="com.version.smec.wms.module.PreviewFile.PreviewFileActivity"/>
+
+        <activity
+            android:name="com.version.smec.wms.module.Requirements.RequirementsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.version.smec.wms.module.SalesSlipment.SalesSlipmentActivity"/>
+        <activity android:name="com.version.smec.wms.module.BorrowingForm.BorrowingFormActivity"/>
+        <activity
+            android:name="com.version.smec.wms.module.PendingApproval.PendingApprovalActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.version.smec.wms.module.Acceptance.AcceptanceActivity" />
+
+        <activity android:name="com.version.smec.wms.module.LogisticsList.LogisticsActivity"/>
+        <activity android:name="com.version.smec.wms.module.LogisticsDetail.LogisiticsDetailActivity"/>
+        <activity android:name="com.version.smec.wms.module.logs.LogsActivity"/>
+
+    </application>
+
+</manifest>

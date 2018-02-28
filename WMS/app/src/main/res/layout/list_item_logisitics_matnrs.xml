@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.version.smec.wms.module.LogisticsDetail.bean.LogisitiicsDetailMatnrModule"></import>
+        <variable
+            name="matrnsInfo"
+            type="LogisitiicsDetailMatnrModule"/>
+    </data>
+
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/px20dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:layout_marginRight="@dimen/px20dp"
+        android:background="@drawable/bg_border"
+        android:padding="@dimen/px10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            style="@style/ListItemLogisiticsMatnrsLinearlayout">
+            <TextView
+                style="@style/ListItemLogisiticsMatnrsTextView"
+                android:text="物料编号：" />
+            <TextView
+                style="@style/ListItemLogisiticsMatnrsTextView"
+                android:text="@{matrnsInfo.matnr}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ListItemLogisiticsMatnrsLinearlayout">
+            <TextView
+                style="@style/ListItemLogisiticsMatnrsTextView"
+                android:text="物料名称：" />
+            <TextView
+                android:text="@{matrnsInfo.matnrName}"
+                style="@style/ListItemLogisiticsMatnrsTextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/ListItemLogisiticsMatnrsLinearlayout">
+            <TextView
+                android:text="装箱数量："
+                style="@style/ListItemLogisiticsMatnrsTextView" />
+            <TextView
+                android:text="@{matrnsInfo.outboundQty}"
+                style="@style/ListItemLogisiticsMatnrsTextView" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_user">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="0dp"
+        android:textColor="@color/bg_white"
+        >
+
+        <TextView
+            android:id="@+id/common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/common_back"
+            android:layout_width="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/fanhui"
+            android:scaleType="fitCenter"
+            android:background="@drawable/selector_main_bg"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center">
+                <ImageButton
+                    android:id="@+id/common_cancel_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_main_bg"
+                    android:src="@mipmap/cancel" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_main_bg"
+                android:layout_gravity="center">
+                <ImageButton
+                    android:id="@+id/common_hand_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_main_bg"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/input" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:background="@drawable/selector_main_bg"
+                android:layout_height="fill_parent">
+                <ImageButton
+                    android:id="@+id/common_light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_main_bg"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/flash_light" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

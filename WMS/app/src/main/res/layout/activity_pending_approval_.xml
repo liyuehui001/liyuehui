@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wms="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.version.smec.wms.module.PendingApproval.PendingApprovalActivity">
+
+    <data>
+        <variable
+            name="penViewModel"
+            type="com.version.smec.wms.module.PendingApproval.PendingApprovalViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:background="@color/color_activity_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container">
+
+        <com.version.smec.wms.widget.TopBarLayout
+            wms:icon_left="@mipmap/wms_requirement_back"
+            android:id="@+id/topar"
+            android:layout_height="@dimen/px100dp"
+            android:layout_width="match_parent">
+
+        </com.version.smec.wms.widget.TopBarLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/px12dp"
+            android:layout_marginRight="@dimen/px12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/smallgray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px102dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/fillet_pending"
+                android:layout_weight="10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_uu"
+                    android:src="@mipmap/pendingsearch"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/px62dp" />
+
+                <EditText
+                    android:background="@null"
+                    android:textColor="@color/text_search_color"
+                    android:gravity="center_vertical|left"
+                    android:paddingBottom="1dp"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:text="@={penViewModel.searchKeyWord}"
+                    android:id="@+id/ed_generalsearch"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:textColorHint="@color/color_general_search"
+                    android:hint="请输入单号 使用项目"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="@dimen/px62dp" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_clear"
+                    android:src="@drawable/smec_clear"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/px42dp" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:onClick="tabClik"
+                android:src="@mipmap/pendingsenior"
+                android:id="@+id/iv_senior"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="@dimen/px0dp"
+                android:layout_marginLeft="@dimen/px10dp"
+                android:layout_marginRight="@dimen/px12dp"
+                android:layout_height="@dimen/px62dp" />
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:background="@color/smallgray"
+            android:id="@+id/viewpager"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px82dp">
+
+            <LinearLayout
+                android:onClick="tabClik"
+                android:id="@+id/btn_headquarters"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                
+                <ImageView
+                    android:id="@+id/img_headquart"
+                    android:src="@mipmap/headquartblue"
+                    android:gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/tv_headquarters"
+                    android:gravity="center"
+                    android:text="分公司-总部"
+                    android:textColor="@{penViewModel.currentItem == 0 ? @color/smallblue : @color/darkgray }"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="tabClik"
+                android:id="@+id/btn_inside"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@mipmap/insidegrey"
+                    android:id="@+id/img_inside"
+                    android:gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/tv_inside"
+                    android:gravity="center"
+                    android:text="分公司内部"
+                    android:textColor="@{penViewModel.currentItem == 1 ? @color/smallblue : @color/darkgray}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

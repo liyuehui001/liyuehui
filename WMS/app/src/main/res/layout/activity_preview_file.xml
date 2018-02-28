@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wms="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="code"
+            type="java.lang.Integer"/>
+        <variable
+            name="view"
+            type="android.view.View"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.version.smec.wms.widget.TopBarLayout
+            wms:icon_left="@mipmap/wms_requirement_back"
+            android:id="@+id/top_bar"
+            android:layout_height="@dimen/px100dp"
+            android:layout_width="match_parent"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.version.smec.wms.widget.ZoomImageView
+                android:visibility="@{code == 10003 ? view.GONE : view.VISIBLE}"
+                android:id="@+id/photo_zoom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:visibility="@{code == 10003 ? view.VISIBLE : view.GONE}"
+                android:id="@+id/pdf_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.github.barteksc.pdfviewer.PDFView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

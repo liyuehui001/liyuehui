@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            style="@style/list_item_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="物料编号:" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/matnr_query_matnr"
+                style="@style/field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <com.smec.wms.android.view.CopyTextView
+                app:copy_text = "@id/matnr_query_matnr"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/copyText"
+                android:text="复制"
+                android:textColor="@color/blue"
+                android:layout_width="60dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/list_item_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="G番:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/matnr_query_gcode"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/list_item_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="L番:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/matnr_query_lcode"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/list_item_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="参数设定:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/matnr_query_remark"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.bm.library.PhotoView
+        android:visibility="gone"
+        android:background="#ee333333"
+        android:id="@+id/zoomBigImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

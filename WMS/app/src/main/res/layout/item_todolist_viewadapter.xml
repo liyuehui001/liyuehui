@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.version.smec.wms.module.Requirements.bean.RequirementMatnrsModel" />
+
+        <variable
+            name="matnrs"
+            type="RequirementMatnrsModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px20dp"
+        android:background="@drawable/bg_border"
+        android:padding="@dimen/px10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            style="@style/RequiremantsLinearLayout"
+            android:layout_alignParentTop="true"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@string/todo_list_goods_number" />
+
+            <TextView
+                android:id="@+id/tv_todo_list_goods_number"
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@{matnrs.matnr}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_middle"
+            style="@style/RequiremantsLinearLayout"
+            android:layout_below="@id/ll_top"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@string/todo_lists_goods_name" />
+
+            <TextView
+                android:id="@+id/tv_todo_lists_goods_name"
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@{matnrs.matnrName}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_maincontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_middle"
+            android:gravity="center|left">
+
+            <LinearLayout
+                android:padding="@dimen/px10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@string/todo_lists_need_number" />
+
+                <TextView
+                    android:id="@+id/tv_todo_lists_need_number"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@{matnrs.qty}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@string/todo_list_units" />
+
+                <TextView
+                    android:id="@+id/tv_todo_list_units"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@{matnrs.unit}" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_dai_yi_jianhuo_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_maincontent"
+            android:gravity="center|left">
+
+            <LinearLayout
+                android:padding="@dimen/px10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@string/str_requirement_dai_good_num" />
+
+                <TextView
+                    android:id="@+id/tv_dai_good_num"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@{matnrs.pickingQty}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@string/str_requirement_yi_good_num" />
+
+                <TextView
+                    android:id="@+id/tv_yi_good_num"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@{matnrs.pickedQty}" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_status_in_box_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_dai_yi_jianhuo_num"
+            android:gravity="center|left">
+
+            <LinearLayout
+                android:padding="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="已装箱数量：" />
+
+                <TextView
+                    android:id="@+id/tv_in_box_good_num"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@{matnrs.finishQty}" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="行状态：" />
+
+                <TextView
+                    android:id="@+id/tv_line_status"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text='@{matnrs.lineStatus.equals("Enabled")? "有效":"无效"}' />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_hdqty_number"
+            android:layout_below="@id/ll_status_in_box_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:padding="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@string/todo_lists_repertory" />
+
+                <TextView
+                    android:id="@+id/tv_todo_lists_repertory"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="@{matnrs.hdQty}" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:padding="@dimen/px10dp"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_line_status_hide"
+                    style="@style/item_todo_list_viewadapter_tv" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_middle_xia"
+            android:layout_below="@id/ll_hdqty_number"
+            style="@style/RequiremantsLinearLayout"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@string/todo_list_can_replace_goods" />
+
+            <TextView
+                android:textSize="@dimen/font_size_14sp"
+                android:id="@+id/tv_todo_list_can_replace_goods"
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@{matnrs.changedMatnr}" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_shuoming"
+            style="@style/RequiremantsLinearLayout"
+            android:layout_below="@id/ll_middle_xia"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@string/todo_list_shuoming" />
+
+            <TextView
+                android:id="@+id/tv_todo_list_shuoming"
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@{matnrs.description}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_reason_for_send"
+            style="@style/RequiremantsLinearLayout"
+            android:layout_below="@id/ll_shuoming"
+            android:gravity="top|left"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="不能发货原因：" />
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@{matnrs.reason}"  />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            style="@style/RequiremantsLinearLayout"
+            android:layout_below="@id/ll_reason_for_send"
+            android:gravity="top|left"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@string/todo_list_comments" />
+
+            <EditText
+                android:background="@drawable/bg_edit_text"
+                android:padding="@dimen/px10dp"
+                android:gravity="left|top"
+                android:id="@+id/et_todo_list_comments"
+                android:textSize="@dimen/font_size_14sp"
+                android:layout_width="@dimen/px380dp"
+                android:layout_height="wrap_content"
+                android:text="@={matnrs.remark}" />
+
+        </LinearLayout>
+
+
+
+        <RadioGroup
+            android:id="@+id/rg_todo_lists_isvalid"
+            style="@style/RequiremantsLinearLayout"
+            android:layout_below="@id/ll_bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_valid"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rb_valid"
+                    android:layout_width="@dimen/px40dp"
+                    android:layout_height="@dimen/px40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_radio_button"
+                    android:button="@null" />
+
+                <TextView
+                    android:padding="@dimen/px10dp"
+                    android:id="@+id/tv_valid"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:layout_marginRight="@dimen/px40dp"
+                    android:text="有效" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_invalid"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rb_invalid"
+                    android:layout_width="@dimen/px40dp"
+                    android:layout_height="@dimen/px40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_radio_button"
+                    android:button="@null" />
+
+                <TextView
+                    android:padding="@dimen/px10dp"
+                    android:id="@+id/tv_invalid"
+                    style="@style/item_todo_list_viewadapter_tv"
+                    android:text="无效" />
+            </LinearLayout>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_packup_apread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_todo_lists_isvalid"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|bottom"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_packup_spread"
+                style="@style/item_todo_list_viewadapter_tv"
+                android:text="@string/todo_list_spread"
+                android:textColor="@color/blue_requirement" />
+
+            <ImageView
+                android:id="@+id/iv_packup_spread"
+                style="@style/style_view_detail_imageview"
+                android:background="@mipmap/wms_requirement_spread" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

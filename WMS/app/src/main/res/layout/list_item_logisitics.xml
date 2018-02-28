@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import
+            type="com.version.smec.wms.module.LogisticsList.bean.LogisticsModule"/>
+        <variable
+            name="logisiticsItemInfo"
+            type="LogisticsModule"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_list_item_logistics_closed"
+        android:padding="@dimen/px10dp"
+        android:layout_marginTop="@dimen/px14dp"
+        android:layout_marginLeft="@dimen/px20dp"
+        android:layout_marginRight="@dimen/px20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="@dimen/px4dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/ll_boundOrderNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/str_list_item_logisitics_zhuangxiang"
+                    style="@style/LogisiticsItemTextViewStyle"/>
+
+                <TextView
+                    android:text="@{logisiticsItemInfo.outboundOrderNo}"
+                    style="@style/LogisiticsItemTextViewStyle"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginRight="@dimen/px20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:text="@{logisiticsItemInfo.status}"
+                    style="@style/LogisiticsItemTextViewStyle"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/px4dp"
+            android:layout_below="@id/ll_boundOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/str_list_item_logistics_boxno"
+                style="@style/LogisiticsItemTextViewStyle" />
+
+            <TextView
+                android:text="@{logisiticsItemInfo.boxNo}"
+                style="@style/LogisiticsItemTextViewStyle" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</layout>

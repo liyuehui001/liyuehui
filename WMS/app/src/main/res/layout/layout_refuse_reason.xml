@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_pop_corner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/popwindow_title"
+        android:gravity="center"
+        android:text="@string/str_final_rejection"
+        android:textSize="@dimen/font_size_20sp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <EditText
+        android:background="@drawable/bg_edit_text"
+        android:id="@+id/et_input_content"
+        android:textSize="@dimen/font_size_14sp"
+        android:layout_margin="@dimen/px20dp"
+        android:padding="@dimen/px10dp"
+        android:gravity="left|top"
+        android:minLines="3"
+        android:maxLength="200"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_negativeButton"
+            android:background="@drawable/bg_btn_pop_cancel"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tv_cancel"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+        
+        <TextView
+            android:id="@+id/tv_positiveButton"
+            android:background="@drawable/bg_btn_pop_submit"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tv_submit"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        style="@style/list_item_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="箱号:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cpzx_boxno"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="品目:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cpzx_class"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/list_item_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="名称:" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cpzx_name"
+            style="@style/field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/list_item_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="物料号:" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cpzx_matnr"
+            style="@style/field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.smec.wms.android.view.CopyTextView
+            app:copy_text = "@id/cpzx_matnr"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/copyText"
+            android:text="复制"
+            android:textColor="@color/blue"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/list_item_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="图号:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cpzx_picno"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="数量:" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cpzx_amount"
+                style="@style/field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        style="@style/list_item_field"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="描述:" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cpzx_remark"
+            style="@style/field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

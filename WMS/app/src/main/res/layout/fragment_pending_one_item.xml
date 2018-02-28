@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ndroid="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="requiremen"
+            type="com.version.smec.wms.module.PendingApproval.bean.RequirementModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:background="@drawable/bg_layout_shade_corner"
+            android:layout_marginLeft="@dimen/px14dp"
+            android:layout_marginRight="@dimen/px14dp"
+            android:layout_marginTop="@dimen/px8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_pendingtitle"
+                android:layout_marginTop="@dimen/px12dp"
+                android:layout_marginLeft="@dimen/px22dp"
+                android:text="需求单"
+                android:textStyle="bold"
+                android:textColor="#ADFF2F"
+                android:textSize="@dimen/font_size_20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginLeft="@dimen/px22dp"
+                android:background="@color/edit_text_normal"
+                android:layout_width="@dimen/px122dp"
+                android:layout_height="@dimen/px2dp"/>
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/px62dp"
+                android:layout_marginLeft="@dimen/px22dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/pendingnumber"
+                        android:gravity="center"
+                        android:layout_width="@dimen/px62dp"
+                        android:layout_height="@dimen/px62dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_no"
+                        android:layout_gravity="center"
+                        android:text="@{requiremen.receiptNo}"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/pendinguser"
+                        android:gravity="center"
+                        android:layout_width="@dimen/px62dp"
+                        android:layout_height="@dimen/px62dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="@{requiremen.user}"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/px62dp"
+                android:layout_marginLeft="@dimen/px22dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_branch"
+                        android:src="@mipmap/pendingweibaozhan"
+                        android:gravity="center"
+                        android:layout_width="@dimen/px62dp"
+                        android:layout_height="@dimen/px62dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="@{requiremen.orgName}"
+                        android:textSize="@dimen/font_size_14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="@dimen/px0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/pengdingtime"
+                        android:gravity="center"
+                        android:layout_width="@dimen/px62dp"
+                        android:layout_height="@dimen/px62dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="@{requiremen.time}"
+                        android:textSize="@dimen/font_size_14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="@dimen/px62dp"
+                android:layout_marginLeft="@dimen/px22dp"
+                android:layout_marginBottom="@dimen/px12dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_billTitle"
+                    android:src="@mipmap/pendinggongsi"
+                    android:gravity="center"
+                    android:layout_width="@dimen/px62dp"
+                    android:layout_height="@dimen/px62dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_billTitle"
+                    android:layout_gravity="center"
+                    android:text="@{requiremen.project}"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="@dimen/px32dp"
+            android:layout_marginRight="@dimen/px10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/img_agent"
+            android:layout_width="@dimen/px180dp"
+            android:layout_height="@dimen/px180dp"  />
+    </RelativeLayout>
+</layout>

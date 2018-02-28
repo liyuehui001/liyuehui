@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="0dp"
+        android:background="@color/background_user"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/home_module_layout">
+
+                <ImageView
+                    style="@style/home_module_image"
+                    android:src="@mipmap/module_inbound1" />
+
+                <TextView
+                    style="@style/home_module_text"
+                    android:text="其他" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rdc_stockquery"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="库存清单查询" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rdc_matnrquery"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="物料价格及信息查询" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rdc_shelfquery"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="货位库存查询" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rdc_matnr_stock_query"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="物料库存查询" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rdc_move"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="移库" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rdc_checkmatnr"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="盘点" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rdc_delivery"
+                android:visibility="gone"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="物流管理" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rdc_cpzx"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="成品装箱清单查询" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rdc_image_query"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_check" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="图片查询" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

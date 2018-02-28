@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.version.smec.wms.module.logs.bean.LogsModule"/>
+        <variable
+            name="logsInfo"
+            type="LogsModule"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="@dimen/px100dp"
+            android:id="@+id/tv_date_time"
+            android:text="@{logsInfo.createTime}"
+            android:layout_width="@dimen/px180dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/ll_view_line_top"
+            android:gravity="center"
+            android:layout_toRightOf="@id/tv_date_time"
+            android:layout_width="@dimen/px40dp"
+            android:layout_height="@dimen/px104dp">
+            <View
+                android:id="@+id/view_line"
+                android:background="@color/logs_time_line"
+                android:layout_width="@dimen/px10dp"
+                android:layout_height="@dimen/px104dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_view_line_below"
+            android:gravity="center"
+            android:layout_toRightOf="@id/tv_date_time"
+            android:layout_below="@id/ll_view_line_top"
+            android:layout_width="@dimen/px40dp"
+            android:layout_height="@dimen/px220dp">
+            <View
+                android:id="@+id/view_line_below"
+                android:background="@color/logs_time_line"
+                android:layout_width="@dimen/px10dp"
+                android:layout_height="@dimen/px220dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_node"
+            android:layout_marginTop="@dimen/px104dp"
+            android:layout_alignLeft="@id/ll_view_line_top"
+            android:background="@mipmap/wms_logs_node_point"
+            android:layout_width="@dimen/px40dp"
+            android:layout_height="@dimen/px40dp" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/px4dp"
+            android:layout_marginTop="@dimen/px80dp"
+            android:paddingLeft="@dimen/px36dp"
+            android:paddingBottom="@dimen/px8dp"
+            android:background="@mipmap/wms_logs_bubble"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/ll_view_line_top"
+            android:layout_width="@dimen/px500dp"
+            android:layout_height="@dimen/px240dp" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="处理人："
+                    style="@style/LogsTextView" />
+                <TextView
+                    android:text="@{logsInfo.creator}"
+                    style="@style/LogsTextView" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="处理节点："
+                    style="@style/LogsTextView"  />
+                <TextView
+                    android:text="@{logsInfo.node}"
+                    style="@style/LogsTextView"  />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="处理结果："
+                    style="@style/LogsTextView"  />
+                <TextView
+                    android:text="@{logsInfo.operation}"
+                    style="@style/LogsTextView"  />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="处理意见："
+                    style="@style/LogsTextView"  />
+                <TextView
+                    android:text="@{logsInfo.commentDetail}"
+                    style="@style/LogsTextView"  />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:wms="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.version.smec.wms.module.BorrowingForm.bean.BorrowingFormModule" />
+        <variable
+            name="borrowing_form_info"
+            type="BorrowingFormModule" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:background="@color/color_activity_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.version.smec.wms.widget.TopBarLayout
+            android:id="@+id/cv_todo_list_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp"
+            android:layout_alignParentTop="true"
+            wms:icon_left="@mipmap/wms_requirement_back"
+            wms:icon_right_second="@mipmap/wms_requirement_list"
+            wms:text_title="@string/todo_detail">
+
+        </com.version.smec.wms.widget.TopBarLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_refuse_agree"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_btn_two_approval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_refuse_approval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp"
+                    android:layout_margin="@dimen/px10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_return"
+                    android:gravity="center"
+                    android:text="@string/tode_list_refuse"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_agree_approval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp"
+                    android:layout_margin="@dimen/px10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_approve"
+                    android:gravity="center"
+                    android:text="@string/borrow_form_agree"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_btn_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_refuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp"
+                    android:layout_margin="@dimen/px10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_return"
+                    android:gravity="center"
+                    android:text="@string/tode_list_refuse"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp"
+                    android:layout_margin="@dimen/px10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn_approve"
+                    android:gravity="center"
+                    android:text="@string/str_borrow_comfirm"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/sv_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_bottom_refuse_agree"
+            android:layout_below="@id/cv_todo_list_detail_title"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_todolist_top_detail"
+                    style="@style/four_bill_style_top">
+
+                    <include
+                        android:id="@+id/include_borrow_form_top"
+                        layout="@layout/layout_borrow_form_top"
+                        bind:borrowFormTopInfo="@{borrowing_form_info}" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_main_content_matrns"
+                    style="@style/four_bill_style_rl_matnr">
+
+                    <TextView
+                        android:id="@+id/matnr_title_info"
+                        android:text="@string/str_borrow_form_matrns_info"
+                        style="@style/four_middle_matnr_title_style_tv" />
+
+                    <Button
+                        android:id="@+id/btn_all_spread_packup_matrns"
+                        android:text="@string/cutout_shouqi"
+                        style="@style/four_bill_style_spread_packup_btn" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_matrns"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_all_spread_packup_matrns"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    style="@style/four_bill_style_rl_matnr">
+
+                    <TextView
+                        android:id="@+id/attach_title_info"
+                        android:text="@string/str_borrow_form_attach_info"
+                        style="@style/four_middle_matnr_title_style_tv" />
+
+                    <Button
+                        android:id="@+id/btn_all_spread_packup_attach"
+                        android:text="收起"
+                        style="@style/four_bill_style_spread_packup_btn" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_attach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_all_spread_packup_attach"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

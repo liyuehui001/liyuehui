@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="matnrs"
+            type="com.version.smec.wms.module.Acceptance.bean.AcceptanceMatnrsModel"/>
+    </data>
+    <LinearLayout
+        android:padding="@dimen/px20dp"
+        android:layout_marginBottom="@dimen/px10dp"
+        android:background="@drawable/bg_border"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            style="@style/RequiremantsLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="物料编号："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="@{matnrs.matnr}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/RequiremantsLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="物料名称："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="@{matnrs.matnrName}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_lingyong"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/RequiremantsLinearLayout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="领用数量："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{matnrs.qty}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                style="@style/RequiremantsLinearLayout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="单位："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{matnrs.unit}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_l"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/RequiremantsLinearLayout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="总部库存："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{matnrs.hdQty}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/RequiremantsLinearLayout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="@dimen/px0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="分公司库存："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{matnrs.branchQty}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ly_y"
+            style="@style/RequiremantsLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="标准售价："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="@{matnrs.standPrice}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_shijichuku"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/RequiremantsLinearLayout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="领用数量："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{matnrs.qty}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                style="@style/RequiremantsLinearLayout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="实际出库数量："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{matnrs.outQty}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ly_danwei"
+            style="@style/RequiremantsLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="单位："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="@{matnrs.unit}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ly_shuoming"
+            style="@style/RequiremantsLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="说明："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/todo_list_detail_tv"
+                android:text="@{matnrs.description}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_packup_apread"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvChakan"
+                android:textColor="@color/blue_requirement"
+                android:text="@string/todo_list_spread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/ivSpread"
+                android:src="@mipmap/wms_requirement_spread"
+                style="@style/style_view_detail_imageview"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

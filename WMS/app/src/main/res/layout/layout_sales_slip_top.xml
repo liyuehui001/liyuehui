@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.version.smec.wms.module.SalesSlipment.bean.SalesSlipModule" />
+
+        <variable
+            name="salesSlipTopInfo"
+            type="SalesSlipModule" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sale_info"
+                style="@style/four_include_top_title"
+                android:text="销售单信息" />
+
+            <LinearLayout
+                android:id="@+id/ll_sales_slip_number"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sales_slip_number" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.receiptNo}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_sale_state"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_state"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_state" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.statusMeaning}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:layout_below="@id/ll_sale_state">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_maintenance_station"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_slip_maintenance_station" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.station}" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_sale_type"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_type" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.salesType}" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_invoice_title"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="发票抬头：" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.billTitle}" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_operator"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_slip_operator" />
+
+                <LinearLayout
+                    android:id="@+id/ll_call_phone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/todo_list_detail_tv"
+                        android:text="@{salesSlipTopInfo.operator}" />
+
+                    <ImageView
+                        android:id="@+id/iv_call_phone"
+                        style="@style/style_call_phone_imageview" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_hide_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_create_person"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sales_create_person" />
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.creator}" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sales_slipcreate_time" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.createTime}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_unit_code"
+                style="@style/todo_list_detail"
+                android:layout_marginRight="@dimen/px30dp">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_collaboration_unit_code"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_slip_collaboration_unit_code" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.coopCode}" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_sale_customer_address"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_customer_address" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.custAddress}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:layout_marginRight="@dimen/px30dp">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_delivery_type"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_slip_delivery_type" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.deliveryType}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:id="@+id/tv_sale_slip_delivery_address"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_sale_slip_delivery_address" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{salesSlipTopInfo.address}" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="right"
+            android:id="@+id/ll_ctrl_hide_show"
+            style="@style/style_bottom_show_hide_linearlayout">
+            <TextView
+                android:id="@+id/tv_spread_packup"
+                android:textColor="@color/blue_requirement"
+                android:text="查看详情"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_spread_packup"
+                android:background="@mipmap/wms_requirement_packup"
+                style="@style/style_view_detail_imageview" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

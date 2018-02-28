@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="0dp">
+    <include
+        layout="@layout/fragment_timeline_3"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/inboud_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inboud_box_init_tip"
+            style="@style/barcode"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <include
+        layout="@layout/fragment_error_message"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/grayborder" /><!--底边border-->
+
+    <ListView
+        android:id="@+id/inboud_box_detail_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/smallblack"
+            android:layout_weight="1"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/inbound_scan_orderno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/h2b"
+                    android:text="入库单:"/>
+                <TextView
+                    android:id="@+id/inbound_scan_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/h2b"
+                    android:text="总收箱数:0 已收箱数:0" />
+                <TextView
+                    android:id="@+id/inbound_scan_order_supply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:text="供应商:"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/inboud_box_generate_orderno"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:minWidth="100dp"
+                android:background="@drawable/selector_longin_button"
+                android:text="箱号生成入库单" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

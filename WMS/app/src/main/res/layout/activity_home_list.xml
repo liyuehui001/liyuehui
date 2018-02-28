@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_user"
+    android:orientation="vertical"
+    tools:context="com.smec.wms.android.activity.HomeListActivity">
+    <TextView
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:textColor="#333"
+        android:textSize="18sp"
+        android:text="功能列表"
+        style="@style/common_title"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_user"
+    tools:context="com.smec.wms.android.fragment.MessageFragment">
+
+    <TextView
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:textColor="#333"
+        android:textSize="18sp"
+        android:text="所有消息 "
+        android:background="#F7F7F7"
+        android:layout_height="40dp"
+        style="@style/common_title"/>
+    <TextView
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:textColor="#333"
+        android:textSize="14sp"
+        android:text="2016年09月13日 今天 "
+        android:background="#EFEFEF"
+        style="@style/common_title"
+        android:layout_height="20dp"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="#666"
+            android:text="12:12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="#FCB100"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:textColor="#333"
+            android:text="苏州分公司-物料需求申请"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="#666"
+            android:text="14:12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="#E73928"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:textColor="#333"
+            android:text="(r/3接口报错)物料价格及信息查询"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textColor="#666"
+            android:text="16:12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="#8FC320"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:textColor="#333"
+            android:text="CDC发货给分公司提醒"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

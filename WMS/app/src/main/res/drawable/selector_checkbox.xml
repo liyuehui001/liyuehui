@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true"
+        android:drawable="@mipmap/choose_yes2"/>
+
+    <item android:state_checked="false"
+        android:drawable="@mipmap/choose_no2"/>
+
+</selector>

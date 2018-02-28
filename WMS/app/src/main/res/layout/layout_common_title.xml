@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/selector_main_bg">
+        <ImageButton
+            android:id="@+id/common_back"
+            android:layout_width="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/fanhui"
+            android:scaleType="fitCenter"
+            android:background="@drawable/selector_main_bg"
+            android:layout_height="50dp"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/layout_title"
+            android:text="@string/layout_title"
+            style="@style/layout_title"/>
+    </RelativeLayout>
+</FrameLayout>

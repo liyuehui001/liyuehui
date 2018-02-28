@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.version.smec.wms.module.Requirements.bean.RequirementDetailModel" />
+
+        <variable
+            name="requirementDetailInfo"
+            type="RequirementDetailModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_isurgent"
+                style="@style/urgent_imageview_detail_style"
+                android:background='@{requirementDetailInfo.isUrgent.equals("Y")? @drawable/wms_requirement_agent:@drawable/wms_requirement_unagent}' />
+
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_xuqiu_detail"
+                style="@style/four_include_top_title"
+                android:text="@string/todo_list_detail_info_title" />
+
+            <LinearLayout
+                android:id="@+id/ll_number"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/todo_list_detail_number_text"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/todo_list_detail_number" />
+
+                <TextView
+                    android:id="@+id/todo_list_number"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.receiptNo}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_order_state"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/strstatus_code" />
+
+                <TextView
+                    android:id="@+id/tv_status_code"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.statusMeaning}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fen_com"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_fen_com"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/order_good_company" />
+
+                <TextView
+                    android:id="@+id/tv_fen_com_text"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.branch}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_backup_source"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_backup_source"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/todo_resource_company" />
+
+                <TextView
+                    android:id="@+id/tv_backup_source_text"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.sourceType}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/todolist_sendgoods_time" />
+
+                <TextView
+                    android:id="@+id/tv_sendgoods_time"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.reqDate}" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="使用项目：" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.project}" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_contact_person" />
+
+                <LinearLayout
+                    android:id="@+id/ll_call_phone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_contactPerson"
+                        style="@style/todo_list_detail_tv"
+                        android:text="@{requirementDetailInfo.contactPerson}" />
+
+                    <ImageView
+                        android:id="@+id/iv_call_phone"
+                        style="@style/style_call_phone_imageview" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_hide_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_create_people"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/todo_list_detail_person"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/create_person" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.creator}" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/create_time" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.createTime}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_contractNo" />
+
+                <TextView
+                    android:id="@+id/tv_contractNo"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.contractNo}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:layout_marginRight="@dimen/px30dp">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_eleno" />
+
+                <TextView
+                    android:id="@+id/tv_eleNo"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.eleNo}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/is_togo_company" />
+
+                <TextView
+                    android:id="@+id/tv_is_togo_company"
+                    style="@style/todo_list_detail_tv" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/fahuo_address" />
+
+                <TextView
+                    android:id="@+id/tv_fahuo_address"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{requirementDetailInfo.address}" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_ctrl_hide_show"
+            style="@style/style_bottom_show_hide_linearlayout"
+            android:layout_below="@id/ll_hide_show">
+            <TextView
+                android:id="@+id/tv_spread_packup"
+                android:textColor="@color/blue_requirement"
+                android:text="查看详情"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_spread_packup"
+                android:background="@mipmap/wms_requirement_packup"
+                style="@style/style_view_detail_imageview" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

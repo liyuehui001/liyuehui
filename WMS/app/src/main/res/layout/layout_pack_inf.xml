@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <include layout="@layout/fragment_timeline_4" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/grayborder" />
+    <!--底边border-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/pack_matnr_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/step_layout_1"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="拣货单号:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pack_no"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="目的地:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pack_destination"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_layout_2"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="装箱箱号:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pack_boxno"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_layout_3"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="物料编码:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pack_matnr"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="物料名称:" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pack_matnr_name"
+                    style="@style/field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="单据数量:" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pack_should_qty"
+                        style="@style/field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="实拣数量:" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pack_real_qty"
+                        style="@style/field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="已装箱量:" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pack_all_box_qty"
+                        style="@style/field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="本箱已装:" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pack_box_qty"
+                        style="@style/field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_layout_4"
+                style="@style/field_layout"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="装箱数量:" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/pack_amount"
+                        style="@style/field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_edittext"
+                        android:inputType="phone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="单位:" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pack_unit"
+                        style="@style/field"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pack_platinf_layout"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/pack_plat_tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="请扫描印版编号"/>
+                <View
+                    style="@style/line"/>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/pack_plat_list"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/pack_action_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_main_bg"
+                    android:text="操作明细"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/pack_action_nobox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_main_bg"
+                    android:text="无箱"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/pack_action_submit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_orange_button"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp" />
+</LinearLayout>

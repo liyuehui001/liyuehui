@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background_user"
+        android:layout_marginTop="0dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                style="@style/home_list_item_layout">
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_tmp" />
+
+                <TextView
+                    android:id="@+id/user_username"
+                    style="@style/home_list_item_text"
+                    android:text="阿三" />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/module_inbound1" />
+
+                <TextView
+                    android:id="@+id/user_warehouse"
+                    style="@style/home_list_item_text"
+                    android:text="福建分公司" />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/network" />
+
+                <TextView
+                    android:id="@+id/user_network"
+                    style="@style/home_list_item_text"
+                    android:text="外网" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_about"
+                android:layout_marginTop="25dp"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_tmp" />
+
+                <TextView
+                    android:id="@+id/app_version"
+                    style="@style/home_list_item_text"
+                    android:text="关于软件" />
+            </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:id="@+id/user_version"-->
+                <!--style="@style/home_list_item_layout">-->
+
+                <!--<ImageView-->
+                    <!--style="@style/home_list_item_image"-->
+                    <!--android:src="@mipmap/fun_tmp" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/home_list_item_text"-->
+                    <!--android:text="新版本检查" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/connect_bluetooth"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/bluetooth" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:id="@+id/list_item_connect_bluetooth"
+                    android:text="连接蓝牙设备" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_change_network"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_tmp" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="系统环境" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_logout"
+                style="@style/home_list_item_layout">
+
+                <ImageView
+                    style="@style/home_list_item_image"
+                    android:src="@mipmap/fun_tmp" />
+
+                <TextView
+                    style="@style/home_list_item_text"
+                    android:text="退出" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <!--<RelativeLayout-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:weightSum="1">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/l1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/height_for_l"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginTop="@dimen/width_between_l"-->
+                <!--android:background="@drawable/selector_l_bg"-->
+                <!--android:clickable="true"-->
+                <!--android:orientation="horizontal">-->
+
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/imageView"-->
+                    <!--android:layout_width="@dimen/height_for_icon"-->
+                    <!--android:layout_height="@dimen/height_for_icon"-->
+                    <!--android:layout_gravity="center"-->
+
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:src="@mipmap/ic_launcher" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/name_textView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="timo"-->
+                    <!--android:textColor="@color/black_user"-->
+                    <!--android:textSize="@dimen/text_size_for_l" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/l2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/height_for_l"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_below="@+id/l1"-->
+                <!--android:layout_marginTop="1dp"-->
+                <!--android:clickable="true"-->
+                <!--android:background="@drawable/selector_l_bg"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/height_for_icon"-->
+                    <!--android:layout_height="@dimen/height_for_icon"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:src="@mipmap/ic_launcher" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:id="@+id/house_textView"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="新疆石河子分公司"-->
+                    <!--android:textColor="@color/black_user"-->
+                    <!--android:textSize="@dimen/text_size_for_l" />-->
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/l3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/height_for_l"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_below="@+id/l2"-->
+                <!--android:layout_marginTop="@dimen/width_between_l"-->
+                <!--android:background="@drawable/selector_l_bg"-->
+                <!--android:clickable="true"-->
+
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/height_for_icon"-->
+                    <!--android:layout_height="@dimen/height_for_icon"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:src="@mipmap/ic_launcher" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="新版本检查"-->
+                    <!--android:textColor="@color/black_user"-->
+                    <!--android:textSize="@dimen/text_size_for_l" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/l4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/height_for_l"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_below="@+id/l3"-->
+                <!--android:layout_marginTop="1dp"-->
+                <!--android:background="@drawable/selector_l_bg"-->
+                <!--android:clickable="true"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/height_for_icon"-->
+                    <!--android:layout_height="@dimen/height_for_icon"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:src="@mipmap/ic_launcher" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="关于"-->
+                    <!--android:textColor="@color/black_user"-->
+                    <!--android:textSize="@dimen/text_size_for_l" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/l5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/height_for_l"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_below="@+id/l4"-->
+                <!--android:layout_marginTop="1dp"-->
+                <!--android:background="@drawable/selector_l_bg"-->
+                <!--android:clickable="true"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/height_for_icon"-->
+                    <!--android:layout_height="@dimen/height_for_icon"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:src="@mipmap/ic_launcher" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:layout_marginLeft="@dimen/width_between_icon_text"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="退出账号"-->
+                    <!--android:textColor="@color/black_user"-->
+                    <!--android:textSize="@dimen/text_size_for_l" />-->
+            <!--</LinearLayout>-->
+
+
+
+        <!--</RelativeLayout>-->
+
+    </ScrollView>
+</FrameLayout>

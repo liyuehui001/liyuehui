@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ndroid="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:background="@drawable/fillet_pending"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="销售单"
+                android:textColor="#ADFF2F"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:background="@color/smallblue"
+                android:layout_width="60dp"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/pendingnumber"
+                        android:gravity="center"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="XQ3712345678"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/pendinguser"
+                        android:gravity="center"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="赵璐璐"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/insidebule"
+                        android:gravity="center"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="苏州分公司"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/pengdingtime"
+                        android:gravity="center"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="2017-09-01"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/pendinggongsi"
+                    android:gravity="center"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="上海市XX房地产公司"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="@dimen/px22dp"
+            android:layout_marginRight="@dimen/px20dp"
+            android:rotation="30"
+            android:layout_alignParentRight="true"
+            android:id="@+id/img_agent"
+            android:background="@mipmap/wms_requirement_agent"
+            android:layout_width="@dimen/px180dp"
+            android:layout_height="@dimen/px130dp" />
+    </RelativeLayout>
+</layout>

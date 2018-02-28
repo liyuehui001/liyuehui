@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_image_query"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.smec.wms.android.activity.ImageQueryActivity">
+    <LinearLayout
+        android:background="@drawable/bg_card"
+        android:layout_margin="4dp"
+        android:padding="8dp"
+        android:id="@+id/text_group"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:text="梯种: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <EditText
+                    android:id="@+id/elevatorTypeNumText"
+                    android:textSize="18sp"
+                    android:hint="请输入梯种"
+                    android:layout_weight="0.39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:text="品目号: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <EditText
+                    android:id="@+id/classTypeNumText"
+                    android:textSize="18sp"
+                    android:hint="请输入品目号"
+                    android:layout_weight="0.39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:text="物料号: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <EditText
+                    android:id="@+id/matnrTypeNumText"
+                    android:textSize="18sp"
+                    android:hint="请输入物料号"
+                    android:layout_weight="0.39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <Button
+                android:textColor="#333"
+                android:layout_weight="1"
+                android:id="@+id/clear_query_btn"
+                android:text="清空"
+                android:layout_margin="4dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+            <Button
+                android:textColor="#efefef"
+                android:background="@color/blue_user"
+                android:layout_weight="1"
+                android:id="@+id/image_query_btn"
+                android:text="查询"
+                android:layout_margin="4dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/matter_fragment"
+        class="com.smec.wms.android.fragment.WmsMatterFragment"
+        android:layout_margin="4dp"
+        android:layout_below="@id/text_group"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </fragment>
+
+    <com.bm.library.PhotoView
+        android:visibility="gone"
+        android:background="#ee333333"
+        android:id="@+id/zoomBigImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

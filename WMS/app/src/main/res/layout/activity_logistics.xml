@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wms="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:background="@color/color_activity_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.version.smec.wms.widget.TopBarLayout
+            android:id="@+id/cv_todo_list_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp"
+            android:layout_alignParentTop="true"
+            wms:icon_left="@mipmap/wms_requirement_back"
+            wms:text_title="@string/str_logistics_list_title">
+
+        </com.version.smec.wms.widget.TopBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_logistics_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</layout>

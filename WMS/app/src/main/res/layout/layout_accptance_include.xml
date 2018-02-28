@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="acceptanceInformession"
+            type="com.version.smec.wms.module.Acceptance.bean.AcceptanceModule"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/ly_tv_title"
+                android:text="领用单信息"
+                style="@style/four_include_top_title" />
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="领用单号：" />
+
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/tv_accptance_lingyongdanhao"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.receiptNo}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_statusCode"
+                android:visibility="gone"
+                style="@style/todo_list_detail"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="单据状态：" />
+
+                <TextView
+                    android:id="@+id/tv_accptance_danjuzhuangtai"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.statusMeaning}" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="维保站："/>
+
+                <TextView
+                    android:id="@+id/tv_accptance_weibaozhan"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.station}" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="领用类型：" />
+
+                <TextView
+                    android:id="@+id/tv_accptance_lingyongleixing"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.receiveType}" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="领用人：" />
+
+                <LinearLayout
+                    android:id="@+id/ll_call_phone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_accptance_lingyongren"
+                        style="@style/todo_list_detail_tv"
+                        android:text="@{acceptanceInformession.receiveUser}" />
+
+                    <ImageView
+                        android:id="@+id/iv_call_phone"
+                        style="@style/style_call_phone_imageview"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="领用时间：" />
+                <TextView
+                    android:id="@+id/tv_accptance_time"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.receiveTime}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="使用项目：" />
+                <TextView
+                    android:id="@+id/tv_project"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.project}" />
+            </LinearLayout>
+
+            <!-- =========================================================-->
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_hide_show"
+            android:layout_below="@id/ll_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_accptance_yuanyinleixing"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="领用原因类型："/>
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.reasonType}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_accptance_data"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="需求日期：" />
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.reqDate}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ChangeNumber"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_ReceiptNumber"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="内部订单号：" />
+
+                <TextView
+                    android:id="@+id/tv_changeNumber"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.internalNo}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ChangeName"
+                style="@style/todo_list_detail">
+                <TextView
+                    android:id="@+id/tv_ReceiptName"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="内部订单名称：" />
+
+                <TextView
+                    android:id="@+id/tv_changeName"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.internalNanme}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_accptance_hetongleixing"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="合同类型：" />
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.contType}" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="合同号："/>
+
+
+                <TextView
+                    android:id="@+id/tv_accptance_hetonghao"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.contNo}" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="产品合同号："/>
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.contractNo}" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="梯号：" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.eleNo}" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="发货类型："/>
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.deliveryType}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail">
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="发货地址：" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{acceptanceInformession.address}"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_agent"
+            style="@style/urgent_imageview_detail_style" />
+
+        <LinearLayout
+            android:id="@+id/ll_ctrl_hide_show"
+            style="@style/style_bottom_show_hide_linearlayout"
+            android:layout_below="@id/ll_hide_show">
+            <TextView
+                android:id="@+id/tv_spread_packup"
+                android:textColor="@color/blue_requirement"
+                android:text="查看详情"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_spread_packup"
+                android:background="@mipmap/wms_requirement_packup"
+                style="@style/style_view_detail_imageview" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</layout>

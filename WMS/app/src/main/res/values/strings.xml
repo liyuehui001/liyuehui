@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">WMS</string>
+    <string name="app_version">1.1.14</string>
+
+    <string name="hello_world">Hello World!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="action_search">查找</string>
+    <string name="action_add">添加</string>
+    <string name="menu_group_chat">发起群聊</string>
+    <string name="menu_feedback">意见反馈</string>
+    <string name="menu_addfriend">添加朋友</string>
+    <string name="menu_scan">扫一扫</string>
+
+    <string name="tab_1">入库</string>
+    <string name="tab_2">装箱</string>
+    <string name="tab_3">待定</string>
+    <string name="tab_4">我的</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="inboud_box_init_tip">请扫描入库单号</string>
+    <string name="layout_title">上海三菱电梯</string>
+    <string name="title_activity_image_query">ImageQueryActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--需求单详情字符串-->
+    <string name="tode_list_refuse">驳回</string>
+    <string name="tode_list_agree">批准</string>
+
+
+
+    <string name="borrow_form_agree">确认</string>
+
+    <string name="todo_list_detail_info_title">需求单信息</string>
+    <string name="todo_list_detail_number">需求单号：</string>
+    <string name="create_person">创建人：</string>
+    <string name="order_good_company">订货分公司：</string>
+    <string name="todo_resource_company">需求来源：</string>
+    <string name="create_time">创建时间：</string>
+    <string name="todolist_sendgoods_time">需求发货时间：</string>
+    <string name="con_person">需求发货日期：</string>
+    <string name="strstatus_code">单据状态：</string>
+    <string name="agreement_number">合同号：</string>
+    <string name="ladder_number">梯号：</string>
+    <string name="is_togo_company">是否发往分公司：</string>
+    <string name="fahuo_address">发货地址：</string>
+    <string name="cutout_shouqi">收起</string>
+    <string name="todo_list_detail_detail">需求单物料信息</string>
+    <string name="todo_detail">单据详情</string>
+    <string name="todo_list_goods_number">物料编号：</string>
+    <string name="todo_lists_goods_name">物料名称：</string>
+    <string name="todo_lists_need_number">需求数量：</string>
+    <string name="todo_lists_repertory">总部库存：</string>
+    <string name="todo_list_units">单位：</string>
+    <string name="todo_list_can_replace_goods">可替代物料：</string>
+    <string name="todo_list_shuoming">说明：</string>
+    <string name="todo_list_comments">备注：</string>
+    <string name="todo_list_pack_up">收起</string>
+    <string name="todo_list_spread">查看详情</string>
+    <string name="str_final_rejection">驳回意见</string>
+    <string name="tv_submit">提交</string>
+    <string name="tv_cancel">取消</string>
+    <string name="str_contact_person">联系人：</string>
+    <string name="str_contact_phone">联系电话：</string>
+    <string name="str_contractNo">合同号：</string>
+    <string name="str_eleno">梯号：</string>
+    <string name="str_used_project">使用项目：</string>
+    <string name="str_check_goods_liu">查看物流</string>
+        <string name="str_check_goods_confirm">确认</string>
+    <string name="sales_slip_goods_info">销售订单物料信息</string>
+    <string name="str_sales_slip_number">销售单号：</string>
+    <string name="str_sales_create_person">创建人：</string>
+    <string name="str_sales_slipcreate_time">创建时间：</string>
+    <string name="str_sales_slip_contact_phone">联系电话：</string>
+    <string name="str_sale_slip_contact_person">联系人：</string>
+    <string name="str_sale_type">销售类型：</string>
+    <string name="str_sale_slip_maintenance_station">维保站：</string>
+    <string name="str_sale_slip_collaboration_unit_code">协作单位代码：</string>
+    <string name="str_sale_slip_operator">经办人：</string>
+    <string name="str_sale_slip_delivery_address">发货地址：</string>
+    <string name="str_sale_slip_delivery_type">发货类型：</string>
+    <string name="str_sale_customer_address">客户地址：</string>
+    <string name="str_item_sale_slip_good_number">物料编号：</string>
+    <string name="str_item_sale_slip_good_name">物料名称：</string>
+    <string name="str_item_sale_number">销售数量：</string>
+    <string name="str_item_sale_unit">单位：</string>
+    <string name="str_sale_repertory_all">总部库存：</string>
+    <string name="str_sale_repertory_part">分公司库存：</string>
+    <string name="str_item_sale_slip_standard_selling_price">标准零售单价：</string>
+
+
+    <string name="str_borrow_form_info">借用单信息</string>
+    <string name="str_borrow_form_number">借用单号：</string>
+    <string name="str_borrow_form_maintenance_station">维保站：</string>
+    <string name="str_borrow_type">借用类型：</string>
+    <string name="str_borrow_person">借用人：</string>
+    <string name="str_borrow_form_phone">联系电话：</string>
+    <string name="str_borrow_time">借用时间：</string>
+    <string name="str_borrow_form_return_time">归还时间：</string>
+    <string name="str_borrow_form_reason">借用原因：</string>
+    <string name="str_borrow_form_unit">借用单位：</string>
+    <string name="str_borrow_form_inside_order_no">内部订单号：</string>
+    <string name="str_borrow_form_name_inside_order_name">内部订单名称：</string>
+    <string name="str_borrow_form_contract_type">合同类型：</string>
+    <string name="str_borrow_form_contract_no">合同号：</string>
+    <string name="str_borrow_form_good_contract_no">产品合同号：</string>
+    <string name="str_borrow_form_use_project">使用项目：</string>
+    <string name="str_borrow_form_ele_no">梯号：</string>
+    <string name="str_borrow_form_fahuo_address">发货地址：</string>
+    <string name="str_borrow_form_fahuo_type">发货类型：</string>
+    <string name="str_borrow_form_matrns_info">借用单物料信息</string>
+    <string name="str_borrow_form_attach_info">附件信息</string>
+    <string name="str_list_item_borrow_form_matrn_no">物料编号：</string>
+    <string name="str_list_item_borrow_form_matnr_name">物料名称：</string>
+    <string name="str_list_item_borrow_matnr_number">借用数量：</string>
+    <string name="str_list_item_borrow_form_matnr_unit">单位：</string>
+    <string name="str_item_form_borrow_form_hdqty">总部库存：</string>
+    <string name="str_list_item_borrow_form_branchqty">分公司库存：</string>
+    <string name="str_list_item_borrow_form_stand_price">标准销售价：</string>
+    <string name="str_borrow_form_list_item_attach_file_name">文件名：</string>
+    <string name="str_list_item_borrow_form_attach_update_time">上传时间：</string>
+    <string name="str_list_item_borrow_form_attach_update_person">上传者：</string>
+
+=======
+    <!--需求单详情字符串-->
+    <string name="str_acceptance_xiangqing">领用单详情</string>
+    <string name="str_acceptance_danhao">领用单号：</string>
+    <string name="str_acceptance_weibaozhan">维保站：</string>
+    <string name="str_acceptance_lingyongleixing">领用类型：</string>
+    <string name="str_acceptance_lingyongren">领用人：</string>
+    <string name="str_acceptance_lianxidianha">联系电话：</string>
+    <string name="str_acceptance_lingyongshjian">领用时间：</string>
+    <string name="str_acceptance_lingyongyuanyinleixixng">领用原因类型：</string>
+    <string name="str_acceptance_xuqiuriqi">需求日期：</string>
+    <string name="str_acceptance_chengbenhao">成本中心号：</string>
+    <string name="str_acceptance_chengbenzhongxinmingcheng">成本中心名称：</string>
+    <string name="str_acceptance_hetongleixing">合同类型：</string>
+    <string name="str_acceptance_hetonghao">合同号：</string>
+    <string name="str_acceptance_chanpinhetonghao">产品合同号：</string>
+    <string name="str_acceptance_tihao">梯号：</string>
+    <string name="str_acceptance_shiyongxiangm">使用项目：</string>
+    <string name="str_acceptance_fahuoleixing">发货类型：</string>
+    <string name="str_acceptance_fahuodizhi">发货地址：</string>
+    <string name="str_sale_state">单据状态：</string>
+    <string name="str_state_borrow">单据状态：</string>
+    <string name="str_logistics_list_title">物流列表</string>
+    <string name="str_list_item_logisitics_zhuangxiang">装箱单号：</string>
+    <string name="str_list_item_logistics_boxno">装箱箱号：</string>
+    <string name="str_requirement_confirm">确认</string>
+    <string name="str_borrow_comfirm">批准</string>
+    <string name="str_acceptance_comfirm">确认</string>
+    <string name="str_requirement_dai_good_num">待拣货数量：</string>
+    <string name="str_requirement_yi_good_num">已拣货数量：</string>
+    <string name="str_sale_desc">说明：</string>
+    <string name="str_borrow_desc">说明：</string>
+
+
+</resources>

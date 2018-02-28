@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="5dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/query_matnr_dwgno"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="请输入图号"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:background="@drawable/selector_edittext"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/matnr_query_query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜索"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/query_text_color"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/gray"
+                    android:layout_height="fill_parent"/>
+                <TextView
+                    android:id="@+id/matnr_query_advance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高级"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/line"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/stock_query_lv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+    <com.bm.library.PhotoView
+        android:visibility="gone"
+        android:background="#ee333333"
+        android:id="@+id/zoomBigImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

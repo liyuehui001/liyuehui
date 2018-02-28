@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.version.smec.wms.module.BorrowingForm.bean.BorrowingFormModule" />
+
+        <variable
+            name="borrowFormTopInfo"
+            type="BorrowingFormModule" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_borrow_form_image"
+            style="@style/urgent_imageview_detail_style"
+            android:background='@{borrowFormTopInfo.isUrgent.equals("Y")? @drawable/wms_requirement_agent:@drawable/wms_requirement_unagent}' />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_jy_detail"
+                style="@style/four_include_top_title"
+                android:text="@string/str_borrow_form_info" />
+
+            <LinearLayout
+                android:id="@+id/ll_number"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/todo_list_detail_number_text"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_number" />
+
+                <TextView
+                    android:id="@+id/todo_list_number"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.receiptNo}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_borrow_state"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_state_borrow" />
+
+                <TextView
+                    android:id="@+id/tv_borrow_state"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.statusMeaning}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_maintenance_station"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_maintenance_station" />
+
+                <TextView
+                    android:id="@+id/tv_status_code"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.station}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_fen_com"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_fen_com"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_type" />
+
+                <TextView
+                    android:id="@+id/tv_fen_com_text"
+                    style="@style/todo_list_detail_tv"
+                    android:layout_alignTop="@id/tv_fen_com"
+                    android:layout_toRightOf="@id/tv_fen_com"
+                    android:text="@{borrowFormTopInfo.sourceType}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_backup_source"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_backup_source"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_person" />
+
+                <LinearLayout
+                    android:id="@+id/ll_call_phone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_backup_source_text"
+                        style="@style/todo_list_detail_tv"
+                        android:text="@{borrowFormTopInfo.borrowUser}" />
+
+                    <ImageView
+                        android:id="@+id/iv_call_phone"
+                        style="@style/style_call_phone_imageview" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_create_people"
+                style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/todo_list_detail_person"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_time" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.borrowTime}" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    android:id="@+id/tv_project"
+                    style="@style/four_desc_title_left_tv"
+                    android:text="使用项目：" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.project}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_show_hide"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_unit" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.borrowComp}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_reason" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.borrowReason}" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_return_time" />
+
+                <TextView
+                    android:id="@+id/tv_sendgoods_time"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.backDate}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_good_contract_no" />
+
+                <TextView
+                    android:id="@+id/tv_contractNo"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.contractNo}" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/todo_list_detail"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px30dp">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_ele_no" />
+
+                <TextView
+                    android:id="@+id/tv_eleNo"
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.eleNo}" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_fahuo_type" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.deliveryType}" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/todo_list_detail">
+
+                <TextView
+                    style="@style/four_desc_title_left_tv"
+                    android:text="@string/str_borrow_form_fahuo_address" />
+
+                <TextView
+                    style="@style/todo_list_detail_tv"
+                    android:text="@{borrowFormTopInfo.address}" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ctrl_hide_show"
+            android:layout_below="@id/ll_show_hide"
+            style="@style/style_bottom_show_hide_linearlayout">
+            <TextView
+                android:id="@+id/tv_spread_packup"
+                android:textColor="@color/blue_requirement"
+                android:text="查看详情"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_spread_packup"
+                android:background="@mipmap/wms_requirement_packup"
+                style="@style/style_view_detail_imageview"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

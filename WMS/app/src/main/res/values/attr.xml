@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="lmticon" format="reference"></attr>
+    <attr name="lmtcolor" format="color"></attr>
+    <attr name="lmttext" format="string"></attr>
+    <attr name="lmttext_size" format="dimension"></attr>
+
+    <declare-styleable name="ChangeColorIconWithText">
+        <attr name="lmticon"></attr>
+        <attr name="lmtcolor"></attr>
+        <attr name="lmttext"></attr>
+        <attr name="lmttext_size"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ClearEditText">
+        <!-- 清除按钮的图标 -->
+        <attr name="iconClear" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularImage">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CopyTextView">
+        <attr name="copy_text" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TopBarLayout">
+        <attr name="text_left" format="string"></attr>
+        <attr name="text_title_header" format="string"></attr>
+        <attr name="text_title" format="string"></attr>
+        <attr name="text_right_first" format="string"></attr>
+        <attr name="text_right_second" format="string"></attr>
+        <attr name="icon_left" format="reference"></attr>
+        <attr name="icon_right_first" format="reference"></attr>
+        <attr name="icon_right_second" format="reference"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ImageTextView">
+        <attr name="image_left_bg" format="reference"></attr>
+        <attr name="image_right_bg" format="reference"></attr>
+        <attr name="view_text" format="string"></attr>
+    </declare-styleable>
+
+</resources>

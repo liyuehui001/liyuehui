@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wms="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.version.smec.wms.module.SalesSlipment.bean.SalesSlipModule"/>
+        <variable
+            name="sale_layout_data"
+            type="SalesSlipModule"/>
+
+    </data>
+
+    <RelativeLayout
+        android:background="@color/color_activity_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.version.smec.wms.widget.TopBarLayout
+            android:id="@+id/tbl_custome_top_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp"
+            android:layout_alignParentTop="true"
+            wms:icon_left="@mipmap/wms_requirement_back"
+            wms:icon_right_second="@mipmap/wms_requirement_list"
+            wms:text_title="待办详情">
+        </com.version.smec.wms.widget.TopBarLayout>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/Rl_bottom_btn_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px100dp">
+
+
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:id="@+id/ll_bottom_btn_two"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_margin="@dimen/px10dp"
+                    android:id="@+id/tv_refuse"
+                    android:background="@drawable/bg_btn_return"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="@string/tode_list_refuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp" />
+
+                <TextView
+                    android:layout_margin="@dimen/px10dp"
+                    android:id="@+id/tv_agree"
+                    android:background="@drawable/bg_btn_approve"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tode_list_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px80dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/sv_main_content"
+            android:layout_above="@id/Rl_bottom_btn_two"
+            android:layout_below="@id/tbl_custome_top_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--上面的布局-->
+                <LinearLayout
+                    style="@style/four_bill_style_top"
+                    android:id="@+id/ll_todolist_top_detail">
+
+                    <include
+                        android:id="@+id/include_sales_slip_top"
+                        layout="@layout/layout_sales_slip_top"
+                        bind:salesSlipTopInfo="@{sale_layout_data}"/>
+
+                </LinearLayout>
+                <!--中间布局-->
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    style="@style/four_bill_style_rl_matnr">
+
+                    <TextView
+                        android:id="@+id/sale_matnr_title_info"
+                        style="@style/four_middle_matnr_title_style_tv"
+                        android:text="@string/sales_slip_goods_info" />
+
+                    <Button
+                        android:id="@+id/btn_all_spread_pack_up_sales_slip"
+                        android:text="展开"
+                        style="@style/four_bill_style_spread_packup_btn"/>
+
+
+                    <!--列表布局-->
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_below="@id/btn_all_spread_pack_up_sales_slip"
+                        android:id="@+id/rcv_sales_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</layout>

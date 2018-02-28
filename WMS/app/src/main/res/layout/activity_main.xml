@@ -1,0 +1,70 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lmtsemc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal"
+        android:visibility="visible"><!--暂时隐藏-->
+
+        <com.smec.wms.android.view.ChangeColorIconWithText
+            android:id="@+id/id_indicator_one"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            lmtsemc:lmticon="@mipmap/select_home"
+            lmtsemc:lmttext="工作台"
+            lmtsemc:lmttext_size="12sp"
+            lmtsemc:lmtcolor="@color/blue_user" />
+
+        <com.smec.wms.android.view.ChangeColorIconWithText
+            android:id="@+id/id_indicator_two"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            lmtsemc:lmticon="@mipmap/unselect_message"
+            lmtsemc:lmttext="消息"
+            lmtsemc:lmttext_size="12sp"
+            lmtsemc:lmtcolor="#ff333333" />
+
+        <com.smec.wms.android.view.ChangeColorIconWithText
+            android:id="@+id/id_indicator_three"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            lmtsemc:lmticon="@mipmap/unselect_list"
+            lmtsemc:lmttext="查询"
+            lmtsemc:lmttext_size="12sp"
+            lmtsemc:lmtcolor="#ff333333" />
+
+        <com.smec.wms.android.view.ChangeColorIconWithText
+            android:id="@+id/id_indicator_four"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            lmtsemc:lmticon="@mipmap/unselect_my"
+            lmtsemc:lmttext="@string/tab_4"
+            lmtsemc:lmttext_size="12sp"
+            lmtsemc:lmtcolor="#ff333333" />
+        
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

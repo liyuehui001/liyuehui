@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <import type="com.version.smec.wms.module.BorrowingForm.bean.BorrowingFormGoodModule"/>
+        <variable
+            name="borrowMatnrsInfo"
+            type="BorrowingFormGoodModule"/>
+    </data>
+
+    <RelativeLayout
+        android:padding="@dimen/px20dp"
+        android:layout_marginBottom="@dimen/px20dp"
+        android:background="@drawable/bg_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_content_matnrs_info"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/str_list_item_borrow_form_matrn_no"
+                    style="@style/item_list_borrow_form_tv"/>
+                <TextView
+                    android:text="@{borrowMatnrsInfo.matnr}"
+                    style="@style/item_list_borrow_form_tv"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/str_list_item_borrow_form_matnr_name"
+                    style="@style/item_list_borrow_form_tv" />
+                <TextView
+                    android:text="@{borrowMatnrsInfo.matnrName}"
+                    style="@style/item_list_borrow_form_tv" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/str_list_item_borrow_matnr_number"
+                        style="@style/item_list_borrow_form_tv" />
+                    <TextView
+                        android:text="@{borrowMatnrsInfo.qty}"
+                        style="@style/item_list_borrow_form_tv"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/str_list_item_borrow_form_matnr_unit"
+                        style="@style/item_list_borrow_form_tv"/>
+                    <TextView
+                        android:text="@{borrowMatnrsInfo.unit}"
+                        style="@style/item_list_borrow_form_tv" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_qty_hd_branch"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/str_item_form_borrow_form_hdqty"
+                        style="@style/item_list_borrow_form_tv" />
+                    <TextView
+                        android:text="@{borrowMatnrsInfo.hdQty}"
+                        style="@style/item_list_borrow_form_tv" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/str_list_item_borrow_form_branchqty"
+                        style="@style/item_list_borrow_form_tv" />
+                    <TextView
+                        android:text="@{borrowMatnrsInfo.branchQty}"
+                        style="@style/item_list_borrow_form_tv"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_stand_price"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/str_list_item_borrow_form_stand_price"
+                    style="@style/item_list_borrow_form_tv" />
+                <TextView
+                    android:text="@{borrowMatnrsInfo.standPrice}"
+                    style="@style/item_list_borrow_form_tv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_desc"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/str_borrow_desc"
+                    style="@style/item_list_borrow_form_tv" />
+                <TextView
+                    android:text="@{borrowMatnrsInfo.description}"
+                    style="@style/item_list_borrow_form_tv" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_spread_packup_borrow_from"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_content_matnrs_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_text_spread_packup"
+                android:layout_gravity="center"
+                android:text="收起"
+                android:textColor="@color/blue_requirement"
+                style="@style/item_list_borrow_form_tv"/>
+            <ImageView
+                android:id="@+id/iv_src_spread_packup"
+                android:src="@mipmap/wms_requirement_packup"
+                style="@style/style_view_detail_imageview" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/capture_container"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/capture_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:id="@+id/capture_crop_view"
+            android:layout_width="280dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/qr_code_bg">
+            <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/tm" />
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/scan_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:text="物料号:" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/stock_query_matnr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:text="物料名称:" />
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/stock_query_matnrname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:text="仓库号:" />
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/stock_query_warehouse"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:text="仓库名称:" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/stock_query_warehousename"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
